@@ -16,7 +16,7 @@ clone_or_pull() {
 clone_or_pull "git@github.com:Plaud-AI/plaud-dev-docs.git" "plaud-dev-docs"
 clone_or_pull "git@github.com:Plaud-AI/tb-plaud-mobile.git" "tb-plaud-mobile"
 
-opencode run "You are in a directory with two repos:\n 1. A mintlify docs repo: plaud-dev-docs \n2. A mobile SDK repo: tb-plaud-mobile \nDo the following: \n1. Read plaud-dev-docs/plaud-embedded/changelog.mdx for the last update date \n2. Look at the commit history for tb-plaud-mobile and focus on updates since the last changelog date (use \`git -C tb-plaud-mobile\` to set working directory when using \`git log\`) \n3. Update plaud-dev-docs/plaud-embedded/changelog.mdx.\n\n Some guidelines for the changelog: \n* Do not include bug information \n* Match the existing style of changelog.mdx \n* Only include larger features/news that users will care about "
+claude -p "You are in a directory with two repos:\n 1. A mintlify docs repo: plaud-dev-docs \n2. A mobile SDK repo: tb-plaud-mobile \nDo the following: \n1. Read plaud-dev-docs/plaud-embedded/changelog.mdx for the last update date \n2. Look at the commit history for tb-plaud-mobile and focus on updates since the last changelog date (use \`git -C tb-plaud-mobile\` to set working directory when using \`git log\`) \n3. Update plaud-dev-docs/plaud-embedded/changelog.mdx.\n\n Some guidelines for the changelog: \n* Do not include bug information \n* Match the existing style of changelog.mdx \n* Only include larger features/news that users will care about "
 
 BRANCH_NAME="changelog-$(uuidgen | tr '[:upper:]' '[:lower:]')"
 
