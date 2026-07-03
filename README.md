@@ -23,3 +23,21 @@ Note: You may need to run `chmod +x changelog-agent.sh` to make the script execu
 3. Commits the updates to a new branch and pushes to GitHub
 
 4. Cleans up directories
+
+# Skill Regression Agent for Plaud Embedded Skill
+
+Run this script for Claude Code to read changes in the **docs** and **look for regressions in the Plaud Skill**.
+
+```bash
+sh changelog-agent.sh
+```
+
+## How it works
+
+1. Clones both the docs repo and the skills repo in your working directory
+
+2. Runs Claude Code headlessly with an instructions prompt
+
+3. Commits the updates to a new branch and pushes to GitHub
+
+4. Cleans up directories
